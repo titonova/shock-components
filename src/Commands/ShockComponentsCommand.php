@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Titonova\ShockComponents\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ShockComponentsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'shock-components';
 
     public $description = 'My command';
 
