@@ -1,6 +1,22 @@
-1. WireUI, WireuiNotifications, WireUI dialog
+# components
+Delete
+Like/dislike
+Heart
+Bookmark
+Flag(report)
+Add tag
+View
 
-* just attach wirui button attributes, it automatically gets attached
+
+
+## Packages:
+composer require willvincent/laravel-rateable
+composer require spatie/laravel-tags
+composer require cybercog/laravel-love
+composer require maize-tech/laravel-markable
+
+
+
 
 
 
@@ -17,16 +33,15 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/titonova/shock-components/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/titonova/shock-components/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/titonova/shock-components.svg?style=flat-square)](https://packagist.org/packages/titonova/shock-components)
 
-Extremely simple Frontend and Backend resuable UI components for performing common actions on Eloquent models such as delete, like, dislike, bookmark etc, built with livewire and [Wire UI](https://github.com/wireui/wireui), and rendered using [X-livewire](https://github.com/titonova/x-livewire).
+This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
-E.g:
+## Support us
 
-For a delete button, this would render a delete button, with a confirm dialog, and a delete action in the backend, without any other setup. Just pop it in your view and it would do the rest.
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/shock-components.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/shock-components)
 
-```Blade
-<x-livewire _="shock::delete" :obj="$post" />
-```
-### 
+We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+
+We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -36,6 +51,25 @@ You can install the package via composer:
 composer require titonova/shock-components
 ```
 
+You can publish and run the migrations with:
+
+```bash
+php artisan vendor:publish --tag="shock-components-migrations"
+php artisan migrate
+```
+
+You can publish the config file with:
+
+```bash
+php artisan vendor:publish --tag="shock-components-config"
+```
+
+This is the contents of the published config file:
+
+```php
+return [
+];
+```
 
 Optionally, you can publish the views using
 
@@ -45,9 +79,10 @@ php artisan vendor:publish --tag="shock-components-views"
 
 ## Usage
 
-...
-
-
+```php
+$shockComponents = new Titonova\ShockComponents();
+echo $shockComponents->echoPhrase('Hello, Titonova!');
+```
 
 ## Testing
 

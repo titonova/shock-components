@@ -2,9 +2,11 @@
 
 namespace Titonova\ShockComponents;
 
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Titonova\ShockComponents\Commands\ShockComponentsCommand;
+use Titonova\ShockComponents\Livewire\Delete;
 
 class ShockComponentsServiceProvider extends PackageServiceProvider
 {
@@ -21,5 +23,14 @@ class ShockComponentsServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasMigration('create_shock-components_table')
             ->hasCommand(ShockComponentsCommand::class);
+    }
+
+
+    /**
+     * Load the livewire components
+     */
+    public function bootingPackage()
+    {
+        Livewire::component('shock::delete', Delete::class);
     }
 }
