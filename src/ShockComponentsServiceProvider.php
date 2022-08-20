@@ -25,7 +25,6 @@ class ShockComponentsServiceProvider extends PackageServiceProvider
             ->hasCommand(ShockComponentsCommand::class);
     }
 
-
     /**
      * Load the livewire components
      */
