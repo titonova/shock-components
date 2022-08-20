@@ -1,10 +1,4 @@
-1. WireUI, WireuiNotifications, WireUI dialog
-
-* just attach wirui button attributes, it automatically gets attached
-
-
-
-
+> ⚠️ Still undergoing development. Do not use in production yet
 
 
 
